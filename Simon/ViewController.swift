@@ -10,11 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var simonLabel: UILabel!
+    @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var greenView: UIView!
+    @IBOutlet weak var redView: UIView!
+    @IBOutlet weak var yellowView: UIView!
+    @IBOutlet weak var blueView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func startButton(_ sender: Any) {
+    }
+    
 }
 
