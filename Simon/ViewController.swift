@@ -10,19 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var background: UIView!
     @IBOutlet weak var simonLabel: UILabel!
     @IBOutlet weak var score: UILabel!
-    @IBOutlet weak var greenView: UIView!
-    @IBOutlet weak var redView: UIView!
-    @IBOutlet weak var yellowView: UIView!
-    @IBOutlet weak var blueView: UIView!
+    @IBOutlet var colorDisplays: [UIView]!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        self.background.backgroundColor = .black
         // Do any additional setup after loading the view.
     }
 
     @IBAction func startButton(_ sender: Any) {
+        
     }
     
+    @IBAction func onColorTapped(_ sender: UITapGestureRecognizer) {
+    }
 }
-

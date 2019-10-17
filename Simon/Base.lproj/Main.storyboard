@@ -18,22 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZn-PU-Zgb">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Mh-au-KXh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EAh-a7-Llj" appends="YES" id="LHn-IF-GfG"/>
+                                </connections>
+                            </view>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZn-PU-Zgb">
                                 <rect key="frame" x="103" y="344" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x1q-w8-f2w">
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x1q-w8-f2w">
                                 <rect key="frame" x="211" y="344" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nC-i0-giA">
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nC-i0-giA">
                                 <rect key="frame" x="103" y="452" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="No1-b0-f8k">
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="No1-b0-f8k">
                                 <rect key="frame" x="211" y="452" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,15 +80,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="blueView" destination="No1-b0-f8k" id="CnH-1b-dz2"/>
-                        <outlet property="greenView" destination="aZn-PU-Zgb" id="E4v-Q4-ZGi"/>
-                        <outlet property="redView" destination="x1q-w8-f2w" id="fVY-Ei-rel"/>
+                        <outlet property="background" destination="6Mh-au-KXh" id="ZSo-Kw-iVe"/>
                         <outlet property="score" destination="kaS-vF-xcq" id="y6I-C2-RD7"/>
                         <outlet property="simonLabel" destination="t5n-Xk-BkY" id="kT0-oI-kkc"/>
-                        <outlet property="yellowView" destination="1nC-i0-giA" id="DSi-pv-UBY"/>
+                        <outletCollection property="colorDisplays" destination="1nC-i0-giA" collectionClass="NSMutableArray" id="irV-GT-mDX"/>
+                        <outletCollection property="colorDisplays" destination="aZn-PU-Zgb" collectionClass="NSMutableArray" id="EQJ-I4-jjp"/>
+                        <outletCollection property="colorDisplays" destination="x1q-w8-f2w" collectionClass="NSMutableArray" id="48v-EO-2Z9"/>
+                        <outletCollection property="colorDisplays" destination="No1-b0-f8k" collectionClass="NSMutableArray" id="Qrm-Tt-ltw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EAh-a7-Llj">
+                    <connections>
+                        <action selector="onColorTapped:" destination="BYZ-38-t0r" id="HHC-2c-WhT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="115.84821428571428"/>
         </scene>
