@@ -80,9 +80,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="background" destination="6Mh-au-KXh" id="ZSo-Kw-iVe"/>
-                        <outlet property="score" destination="kaS-vF-xcq" id="y6I-C2-RD7"/>
+                        <outlet property="colorsFrame" destination="6Mh-au-KXh" id="HgV-fp-XZF"/>
+                        <outlet property="messageLabel" destination="kaS-vF-xcq" id="fUo-xs-q6A"/>
                         <outlet property="simonLabel" destination="t5n-Xk-BkY" id="kT0-oI-kkc"/>
+                        <outlet property="startButton" destination="C4w-dT-gAP" id="V3X-VA-1kW"/>
                         <outletCollection property="colorDisplays" destination="1nC-i0-giA" collectionClass="NSMutableArray" id="irV-GT-mDX"/>
                         <outletCollection property="colorDisplays" destination="aZn-PU-Zgb" collectionClass="NSMutableArray" id="EQJ-I4-jjp"/>
                         <outletCollection property="colorDisplays" destination="x1q-w8-f2w" collectionClass="NSMutableArray" id="48v-EO-2Z9"/>
