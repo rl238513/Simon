@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var colorsFrame: UIView!
     @IBOutlet weak var simonLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         self.colorsFrame.backgroundColor = .black
         playSound(fileName: "start")
     }
-
+    
     @IBAction func startButton(_ sender: Any) {
         if gameOver {
             restart()
@@ -41,10 +41,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onColorTapped(_ sender: UITapGestureRecognizer) {
-        for number in 0..<colorDisplays.count{
-            if colorDisplays[number].frame.contains(sender.location(in: colorsFrame)) {
-                flashColor(number: number)
-                index += 1
+        if playerTurn{
+            for number in 0..<colorDisplays.count{
+                if colorDisplays[number].frame.contains(sender.location(in: colorsFrame)) {
+                    flashColor(number: number)
+                    index += 1
+                }
             }
         }
     }
