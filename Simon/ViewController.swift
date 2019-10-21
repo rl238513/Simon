@@ -27,11 +27,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         self.colorsFrame.backgroundColor = .black
-        // Do any additional setup after loading the view.
+        playSound(fileName: "start")
     }
 
     @IBAction func startButton(_ sender: Any) {
-        
+        if gameOver {
+            restart()
+            displayPattern()
+            gameOver = false
+            startButton.alpha = 0.0
+            messageLabel.text = ""
+        }
     }
     
     @IBAction func onColorTapped(_ sender: UITapGestureRecognizer) {
@@ -73,7 +79,7 @@ class ViewController: UIViewController {
         }
     }
     func displayPattern() {
-        timer = Timer()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: (#selector(ViewController.nextColor)), userInfo: nil, repeats: true)
     }
     @objc func nextColor() {
         if index < pattern.count {
@@ -84,7 +90,7 @@ class ViewController: UIViewController {
             timer.invalidate()
             index = 0
             playerTurn = true
-            messageLable.text = "Your Turn"
+            messageLabel.text = "Your Turn"
         }
     }
 }
